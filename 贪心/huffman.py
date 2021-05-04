@@ -49,11 +49,8 @@ def tree_spanning(ls):##ls列表是n*2数组，ls[i][0]是名字，ls[i][1]是�
         heap.push(node)
     while(heap.length > 1):##不断的取出最小的2个，再生成一个新结点，新结点左右子树就是这2个取出点
         left_node = heap.pop()
-        print(left_node.value)
         right_node = heap.pop()
-        print(right_node.value)
         new_node = Node(Name=left_node.name + "" + right_node.name,value=left_node.value + right_node.value)
-        print(new_node.name)
         new_node.left = left_node
         new_node.right = right_node
         heap.push(new_node)

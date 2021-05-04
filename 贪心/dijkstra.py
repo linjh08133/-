@@ -1,6 +1,6 @@
 import numpy as np
 
-def dijkstra(matrix):##默认找第一个点“A”到其他点最小距离，想找其他点到其他点的距离只需要加个for迭代就好
+def dijkstra(matrix):
     ##邻接矩阵[0][0],表示a到a的距离，其他类似，[i][i]默认为0，若没有连接边则为无穷
     visited = []##记录访问过的点
     min_dis = [float("inf") for i in range(len(matrix))]##初始化距离，在没有访问任何点时距离为无穷大
