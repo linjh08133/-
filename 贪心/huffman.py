@@ -62,6 +62,6 @@ def get_code(root,code):##其实就是中序遍历，先输出当前结点的编
         print("{}的编码是{}".format(root.name,code))
     get_code(root.left,code+"0")
     get_code(root.right,code+"1")
-ls = [["a", 0.45], ["b", 0.13],["c", 0.12], ["d", 0.16], ["e", 0.09],["f",0.05]]
+ls = [["a", 0.1], ["e", 0.15],["i", 0.12], ["t", 0.04], ["S", 0.03],["y",0.13],["z",0.01]]
 root = tree_spanning(ls)
 get_code(root,"")

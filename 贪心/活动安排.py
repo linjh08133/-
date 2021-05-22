@@ -10,7 +10,19 @@ def activity_arrangement(ls):## 参数是一个n*2数组，[i][0]为开始时间
         m = m + 1
     return activity_list , count
 
+def version2(ls):##按开始时间降序排序
+    ls.sort(key = lambda x:x[0],reverse = True)
+    print(ls)
+    ans_list = [ls[0]]
+    count = 1
+    m = 2
+    while( m < len(ls)):
+        if(ls[m][1] <= ans_list[-1][0]):
+            ans_list.append(ls[m])
+            count += 1
+        m += 1
+    return ans_list
 
-
-ls = [[0,6],[1,4],[3,5],[6,10],[8,12],[3,8],[3,5],[12,14],[8,11],[5,7],[6,10],[2,13]]
+ls = [[0,6],[1,4],[3,5],[8,12],[3,8],[12,14],[8,11],[5,7],[6,10],[2,13]]
+print(version2(ls))
 print(activity_arrangement(ls))
